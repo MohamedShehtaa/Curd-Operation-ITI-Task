@@ -1,0 +1,21 @@
+.add input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0.2rem;
+
+
+}
+
+.add input:focus {
+
+    outline-color: gray;
+
+
+
+}
+
+.add button {
+    width: 100%;
+    border-radius: 0px;
+    padding: 0.5rem 1.1rem;
+}

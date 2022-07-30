@@ -1,0 +1,29 @@
+<p>student-list works!</p>
+
+<table class="table table-bordered text-center m-0">
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Student Age</th>
+      <th>EDIT</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of students; let x = even" [ngClass]="{ color: x }">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.age }}</td>
+      <td>
+        <button (click)="getID(item.id)" class="btn btn-secondary">Edit</button>
+      </td>
+      <td>
+        <app-student-delete [id]="item.id"></app-student-delete>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-student-add (studentAdd)="pushStudent($event)"></app-student-add>
+<app-student-edit [id]="editIDToSend" *ngIf="stdser.flag"></app-student-edit>

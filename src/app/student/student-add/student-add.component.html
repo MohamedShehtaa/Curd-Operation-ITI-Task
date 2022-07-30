@@ -1,0 +1,14 @@
+<table class="table table-bordered add m-0">
+  <tbody>
+    <tr>
+      <td class="p-0" scope="row">
+        <input type="text" [(ngModel)]="studentObj.id" />
+      </td>
+      <td class="p-0"><input type="text" [(ngModel)]="studentObj.name" /></td>
+      <td class="p-0"><input type="text" [(ngModel)]="studentObj.age" /></td>
+      <td class="p-0" colspan="2">
+        <button (click)="submit()" class="btn btn-danger px-5">+ADD</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
